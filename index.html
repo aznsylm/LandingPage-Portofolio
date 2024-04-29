@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevLearn</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&family=Poppins:ital,wght@0,100;0,300;0,500;0,700;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+    <!-- Banner Start -->
+
+    <div class="banner bg-primary">
+        <!-- Navbar Start -->
+
+        <nav class="navbar navbar-expand-lg bg-tranparant navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">DevLearn</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link active" aria-current="page" href="#portofolio">Portofolio</a>
+                        <a class="nav-link" href="#experience">Experience</a>
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Navbar End -->
+
+        <div class="text-banner container text-center text-light py-5 mt-5">
+            <p>Selamat datang di website pribadi saya</p>
+            <h1>Aizan <span>Syalim</span></h1>
+            <p class="w-75 m-auto mt-3">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, aspernatur harum? Rerum odio quasi
+                voluptatibus odit? Voluptates laborum suscipit enim.
+            </p>
+            <a href="" class="btn btn-light mt-4">Download CV</a>
+            <a href="" class="btn btn-outline-light mt-4 ms-2">Contant Me</a>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#ffffff" fill-opacity="1"
+                d="M0,96L40,112C80,128,160,160,240,160C320,160,400,128,480,117.3C560,107,640,117,720,133.3C800,149,880,171,960,181.3C1040,192,1120,192,1200,176C1280,160,1360,128,1400,112L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+            </path>
+        </svg>
+    </div>
+
+    <!-- Banner End -->
+
+    <!-- Portofilo Start -->
+
+    <div class="portofolio container text-center my-5" id="portofolio">
+        <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit voluptate consequatur eveniet ad quod
+            dignissimos? </h1>
+        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true"
+            space-between="30" centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+            <swiper-slide>
+                <img src="img/project-image01.png" alt="">
+            </swiper-slide>
+            <swiper-slide>
+                <img src="img/project-image02.png" alt="">
+            </swiper-slide>
+            <swiper-slide>
+                <img src="img/project-image03.png" alt="">
+            </swiper-slide>
+            <swiper-slide>
+                <img src="img/project-image04.png" alt="">
+            </swiper-slide>
+            <swiper-slide>
+                <img src="img/project-image05.png" alt="">
+            </swiper-slide>
+
+            <div class="autoplay-progress" slot="container-end">
+                <svg viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="20"></circle>
+                </svg>
+                <span></span>
+            </div>
+        </swiper-container>
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            const progressCircle = document.querySelector(".autoplay-progress svg");
+            const progressContent = document.querySelector(".autoplay-progress span");
+
+            const swiperEl = document.querySelector("swiper-container");
+            swiperEl.addEventListener("autoplaytimeleft", (e) => {
+                const [swiper, time, progress] = e.detail;
+                progressCircle.style.setProperty("--progress", 1 - progress);
+                progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+            });
+        </script>
+
+    </div>
+
+    <!-- Portofilo End -->
+
+    <!-- Experience & Education Start -->
+    <div class="container"></div>
+
+    <div class="container" id="experience">
+        <div class="row">
+            <!-- Experience -->
+            <div class="col-lg-6">
+                <h1>Experience</h1>
+
+                <div class="my-4">
+                    <h5 class="mb-1 text-secondary">2022</h5>
+                    <h3>Project Manager <span class="text-sub">Best Studio</span></h3>
+                    <p class="text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae nostrum,
+                        recusandae labore totam facilis dolore!</p>
+                </div>
+
+                <div class="my-4">
+                    <h5 class="mb-1 text-secondary">2020</h5>
+                    <h3>Backend Developer <span class="text-sub">Best Studio</span></h3>
+                    <p class="text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae nostrum,
+                        recusandae labore totam facilis dolore!</p>
+                </div>
+
+                <div class="my-4">
+                    <h5 class="mb-1 text-secondary">2019</h5>
+                    <h3>Freelancer</h3>
+                    <p class="text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae nostrum,
+                        recusandae labore totam facilis dolore!</p>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="col-lg-6">
+                <h1>Education</h1>
+
+                <div class="my-4">
+                    <h5 class="mb-1 text-secondary">2026</h5>
+                    <h3>S2 Informatika <span class="text-sub">Universitas Indonesia</span></h3>
+                    <p class="text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae nostrum,
+                        recusandae labore totam facilis dolore!</p>
+                </div>
+
+                <div class="my-4">
+                    <h5 class="mb-1 text-secondary">2024</h5>
+                    <h3>S1 Informatika <span class="text-sub">Universitas Alma Ata</span></h3>
+                    <p class="text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae nostrum,
+                        recusandae labore totam facilis dolore!</p>
+                </div>
+
+                <div class="my-4">
+                    <h5 class="mb-1 text-secondary">2021</h5>
+                    <h3>SMAN 1 Malinau</h3>
+                    <p class="text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae nostrum,
+                        recusandae labore totam facilis dolore!</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Experience & Education End -->
+
+    <!-- Contact Start -->
+
+    <div class="container py-5" id="contact">
+        <div class="row">
+            <div class="col-lg-5"><iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.7297470129333!2d110.3218384751439!3d-7.8184044922022755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7af7e2b2acea97%3A0xa3cb91d3e65407b2!2sUniversitas%20Alma%20Ata%20Yogyakarta!5e0!3m2!1sid!2sid!4v1690000701390!5m2!1sid!2sid"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            <div class="col-7 ps-0 ps-lg-5">
+                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, assumenda?</h1>
+                <form class="action">
+                    <div class="row">
+                        <div class="col-6 mt-5">
+                            <input type="text" class="form-control p-2" placeholder="Nama">
+                        </div>
+                        <div class="col-6 mt-5">
+                            <input type="text" class="form-control p-2" placeholder="Email">
+                        </div>
+                        <div class="col-12">
+                            <textarea name="" id="" cols="30" rows="5" class="form-control mt-3" placeholder="Massage"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary p-2 mt-3 px-4">
+                                Send
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact End -->
+
+    <!-- footer Start -->
+
+    <footer class="text-center py-5 mt-5 text-secondary">
+        <p>Copyright @ 2023 Aizan . All rights reserved</p>
+        <p>Designed By <a href="" class="text-decoration-none">Aizan</a></p>
+    </footer>
+
+    <!-- footer End -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
